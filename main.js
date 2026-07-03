@@ -10,18 +10,18 @@ const PROJECTS = [
   {
     idx: "01",
     title: "Peach — owned all of sales",
-    tags: ["Sales Lead", "AI SDR", "Outbound"],
-    metric: "$120K",
+    tags: ["Sales Lead", "EdTech AI", "Outbound", "Closing"],
+    metric: "₹1 Cr",
     metricLabel: "closed · 45% mine",
-    eyebrow: "AI SDR platform · Sales lead",
+    eyebrow: "AI for personalizing education · Sales lead",
     metrics: [
-      { n: "$120K", l: "Company revenue closed" },
+      { n: "₹1 Cr", l: "Company revenue closed" },
       { n: "45%", l: "Sourced by my leads" },
       { n: "50+", l: "Meetings booked in 6 months" },
     ],
-    problem: "Peach is an AI SDR platform — it sources leads, writes personalized email sequences, and books meetings. Early-stage, selling a technical product to non-technical education buyers, with no repeatable pipeline yet.",
-    action: "Owned the entire sales function. Booked 50+ meetings in six months, ran discovery and demos, and translated an AI/email-infrastructure product into plain business value for school decision-makers.",
-    outcome: "The company closed ~$120K in revenue — roughly 45% of it traced directly to leads I sourced and worked myself.",
+    problem: "Peach is an AI platform for personalizing education — adapting learning to each student. Early-stage, selling a technical AI product to education buyers, with no repeatable pipeline yet.",
+    action: "Owned the entire sales function end-to-end. Booked 50+ meetings in six months, ran discovery and demos, and translated an AI education product into plain business value for the people who sign off.",
+    outcome: "The company closed ₹1 Cr in revenue — roughly 45% of it traced directly to leads I sourced and worked myself.",
   },
   {
     idx: "02",
@@ -73,43 +73,55 @@ const PROJECTS = [
   },
 ];
 
-/* -------- THINGS I'VE BUILT (technical proof) -------- */
+/* -------- THINGS I'VE BUILT (private projects + technical proof) -------- */
 const BUILDS = [
   {
-    name: "Peach — AI SDR",
-    blurb: "The product I sold, end to end: sources leads, writes personalized sequences, books meetings. I know it at the code level.",
-    stack: ["Next.js 16", "Drizzle", "Postgres", "AI SDK"],
+    name: "AI SDR — solo build",
+    blurb: "An AI sales-development rep I built solo: sources leads, writes personalized cold sequences in my voice, and books meetings. The engine behind my own outbound.",
+    stack: ["Next.js", "Drizzle", "Postgres", "AI SDK"],
     link: "",
+    role: "Solo — design, build, ship",
+    detail: "A personal project, start to finish. I wanted outbound that sounded like me and ran itself, so I built one: it pulls target leads, drafts multi-touch cold sequences tuned to my voice, and books meetings. Sold nothing to build it — just proof I can spec, build, and ship an AI product end-to-end, not just sell one.",
+  },
+  {
+    name: "Job-Search Agent",
+    blurb: "A local AI that finds roles, scores them against my résumé, and drafts outreach in my voice. Runs on my own laptop, on free tiers.",
+    stack: ["Next.js", "Gemini", "SQLite", "Adzuna"],
+    link: "",
+    role: "Solo — design, build, ship",
+    detail: "A private tool I built for my own search: it auto-discovers relevant roles across London + India, scores each one against my real résumé, drafts tailored applications and cold outreach in my voice, and scans startup news for companies worth approaching. Draft-and-approve — I send everything myself. Runs locally, on free tiers, controllable from my phone.",
+  },
+  {
+    name: "UNBEATEN XI",
+    blurb: "A daily cricket guessing game — build a team under the constraints, chase the streak.",
+    stack: ["Vite", "React", "TypeScript"],
+    link: "",
+    role: "Solo — design, build, ship",
+    detail: "A for-fun daily puzzle game: build a cricket XI that satisfies the day's constraints and keep your streak alive. Built solo — product, logic, and front-end.",
   },
   {
     name: "RegMitra — RegTech MVP",
     blurb: "Watches 17 Indian regulators, summarizes every circular, and tells a CA exactly which of their clients it hits.",
     stack: ["Next.js", "pgvector", "Python / Playwright", "RAG"],
     link: "",
+    role: "5A Venture Studio — product + build",
+    detail: "The working prototype behind the RegSahay validation: a 17-regulator Python scraper feeding a deterministic applicability engine, so a Chartered Accountant sees only the circulars that actually hit their clients. I built it to prove a purpose-built tool beats raw ChatGPT on recent regulation.",
   },
   {
     name: "Factory Eye — Edge AI",
     blurb: "On-device visual inspection: pass/fail on every part in under a second, with audit-ready logs. No cloud.",
     stack: ["Raspberry Pi", "Hailo", "YOLOv8"],
     link: "",
-  },
-  {
-    name: "Job-Search Agent",
-    blurb: "A local AI that finds roles, scores them against my résumé, and drafts outreach in my voice. Runs on my laptop.",
-    stack: ["Next.js", "Gemini", "SQLite", "Adzuna"],
-    link: "",
+    role: "5A Venture Studio — founder + build",
+    detail: "The product behind Factory Eye: an on-device visual-inspection station (Raspberry Pi + Hailo + YOLOv8) that grades every part in under a second with an audit trail — for under $900, versus $18K–$240K enterprise rigs. I set the spec, drove the hardware-engineer hire, and shipped the product site.",
   },
   {
     name: "Sigil — sigil91.com",
-    blurb: "Legal-ops landing page — designed, built, and shipped.",
+    blurb: "Legal-ops landing page for a fast-scaling-SaaS contract tool — designed, built, and shipped.",
     stack: ["Next.js", "React", "Tailwind"],
     link: "https://sigil91.com",
-  },
-  {
-    name: "UNBEATEN XI",
-    blurb: "A daily cricket guessing game — build a team, chase the streak.",
-    stack: ["Vite", "React", "TypeScript"],
-    link: "",
+    role: "5A Venture Studio — brand + site",
+    detail: "The live product site for Sigil, built end-to-end: brand kit, copy, and a shipped Next.js landing page — sigil91.com. The front door for a founder-led outbound motion across 25+ named SaaS targets.",
   },
 ];
 
@@ -136,11 +148,11 @@ const RECORD = [
     </div>`).join("");
 })();
 (function renderBuilds() {
-  document.getElementById("buildsGrid").innerHTML = BUILDS.map(b => `
-    <div class="build" data-reveal ${b.link ? `data-cursor="hover"` : ""}>
+  document.getElementById("buildsGrid").innerHTML = BUILDS.map((b, i) => `
+    <div class="build" data-reveal data-cursor="hover" data-build="${i}">
       <div class="build__top">
         <h3 class="build__name">${b.name}</h3>
-        ${b.link ? `<a class="build__link" href="${b.link}" target="_blank" rel="noopener" aria-label="Open ${b.name}"><svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>` : ""}
+        ${b.link ? `<a class="build__link" href="${b.link}" target="_blank" rel="noopener" data-stop aria-label="Open ${b.name}"><svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>` : `<span class="build__open" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>`}
       </div>
       <p class="build__blurb">${b.blurb}</p>
       <div class="build__stack">${b.stack.map(s => `<span>${s}</span>`).join("")}</div>
@@ -287,14 +299,61 @@ function openProject(i) {
   modal.setAttribute("aria-hidden", "false");
   if (lenis) lenis.stop();
 }
+function openBuild(i) {
+  const b = BUILDS[i]; if (!b) return;
+  modalContent.innerHTML = `
+    <div class="modal__eyebrow">${b.role || "Project"}</div>
+    <h3 class="modal__title">${b.name}</h3>
+    <div class="modal__block"><h4>What it is</h4><p>${b.detail || b.blurb}</p></div>
+    <div class="modal__tags">${b.stack.map(s => `<span>${s}</span>`).join("")}</div>
+    ${b.link ? `<a class="modal__cta magnetic" href="${b.link}" target="_blank" rel="noopener" data-cursor="hover"><span>Visit ${b.name.split("—")[0].trim()}</span><svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>` : ""}`;
+  modal.classList.add("is-open");
+  modal.setAttribute("aria-hidden", "false");
+  if (lenis) lenis.stop();
+}
 function closeModal() {
   modal.classList.remove("is-open");
   modal.setAttribute("aria-hidden", "true");
   if (lenis) lenis.start();
 }
 document.addEventListener("click", (e) => {
-  const item = e.target.closest("[data-project]");
-  if (item) return openProject(parseInt(item.dataset.project, 10));
+  // let external "visit" links behave normally
+  if (e.target.closest("[data-stop]")) { e.stopPropagation(); return; }
+  const proj = e.target.closest("[data-project]");
+  if (proj) return openProject(parseInt(proj.dataset.project, 10));
+  const build = e.target.closest("[data-build]");
+  if (build) return openBuild(parseInt(build.dataset.build, 10));
   if (e.target.closest("[data-close]")) closeModal();
 });
-document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeModal(); });
+document.addEventListener("keydown", (e) => { if (e.key === "Escape") { closeModal(); closeExit(); } });
+
+/* -------- exit-intent popup -------- */
+const exitModal = document.getElementById("exitModal");
+function openExit() {
+  if (!exitModal) return;
+  exitModal.classList.add("is-open");
+  exitModal.setAttribute("aria-hidden", "false");
+}
+function closeExit() {
+  if (!exitModal) return;
+  exitModal.classList.remove("is-open");
+  exitModal.setAttribute("aria-hidden", "true");
+}
+(function exitIntent() {
+  if (!exitModal) return;
+  let shown = false;
+  const KEY = "kk_exit_shown";
+  try { if (sessionStorage.getItem(KEY)) shown = true; } catch (_) {}
+  // Desktop: fire when the cursor leaves through the top of the viewport.
+  document.addEventListener("mouseout", (e) => {
+    if (shown) return;
+    if (e.clientY <= 0 && !e.relatedTarget) {
+      shown = true;
+      try { sessionStorage.setItem(KEY, "1"); } catch (_) {}
+      openExit();
+    }
+  });
+  exitModal.addEventListener("click", (e) => {
+    if (e.target.closest("[data-exit-close]")) closeExit();
+  });
+})();
