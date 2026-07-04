@@ -12,16 +12,16 @@ const PROJECTS = [
     title: "Peach — owned all of sales",
     tags: ["Sales Lead", "EdTech AI", "Outbound", "Closing"],
     metric: "₹1 Cr",
-    metricLabel: "closed · 45% mine",
+    metricLabel: "closed · ~40% mine",
     eyebrow: "AI for personalizing education · Sales lead",
     metrics: [
-      { n: "₹1 Cr", l: "Company revenue closed" },
-      { n: "45%", l: "Sourced by my leads" },
+      { n: "₹1 Cr", l: "Closed in 10 months" },
+      { n: "~40%", l: "Sourced by my leads" },
       { n: "50+", l: "Meetings booked in 6 months" },
     ],
     problem: "Peach is an AI platform for personalizing education — adapting learning to each student. Early-stage, selling a technical AI product to education buyers, with no repeatable pipeline yet.",
     action: "Owned the entire sales function end-to-end. Booked 50+ meetings in six months, ran discovery and demos, and translated an AI education product into plain business value for the people who sign off.",
-    outcome: "The company closed ₹1 Cr in revenue — roughly 45% of it traced directly to leads I sourced and worked myself.",
+    outcome: "The company closed ₹1 Cr in revenue over 10 months — about 40% of it traced to pipeline I sourced myself and drove through close via stakeholder management.",
   },
   {
     idx: "02",
@@ -41,7 +41,7 @@ const PROJECTS = [
   },
   {
     idx: "03",
-    title: "RegSahay — validated it end-to-end",
+    title: "RegMitra — validated it end-to-end",
     tags: ["Product Validation", "RegTech", "0→1 Prototype"],
     metric: "15+",
     metricLabel: "CAs validated with",
@@ -105,7 +105,7 @@ const BUILDS = [
     stack: ["Next.js", "pgvector", "Python / Playwright", "RAG"],
     link: "",
     role: "5A Venture Studio — product + build",
-    detail: "The working prototype behind the RegSahay validation: a 17-regulator Python scraper feeding a deterministic applicability engine, so a Chartered Accountant sees only the circulars that actually hit their clients. I built it to prove a purpose-built tool beats raw ChatGPT on recent regulation.",
+    detail: "The working prototype behind the RegMitra validation: a 17-regulator Python scraper feeding a deterministic applicability engine, so a Chartered Accountant sees only the circulars that actually hit their clients. I built it to prove a purpose-built tool beats raw ChatGPT on recent regulation.",
   },
   {
     name: "Factory Eye — Edge AI",
@@ -127,9 +127,9 @@ const BUILDS = [
 
 /* -------- TRACK RECORD (verify dates before sharing) -------- */
 const RECORD = [
-  { role: "Founder / GTM", co: "5A Venture Studio", desc: "Leading three ventures 0→1 — Factory Eye, RegSahay, Sigil — from strategy to sales to hiring.", year: "2025 — Now" },
-  { role: "Sales Lead", co: "Peach (AI SDR)", desc: "Owned all sales — 50+ meetings in 6 months; sourced ~45% of closed revenue.", year: "2024 — 25" },
-  { role: "Chief of Staff", co: "Iridia Medical", desc: "Ran operations and commercial motion in a technical, regulated domain.", year: "2023 — 24" },
+  { role: "Founder / GTM", co: "5A Ventures", desc: "Leading three ventures 0→1 — Factory Eye, RegMitra, Sigil — from strategy to sales to hiring.", year: "2026 — Now" },
+  { role: "Sales Lead", co: "Peach (EdTech AI)", desc: "Owned all sales — 50+ meetings in 6 months; sourced ~40% of ₹1 Cr closed.", year: "2025 — 26" },
+  { role: "Chief of Staff", co: "Iridia Medical", desc: "Ran operations and commercial motion in a technical, regulated domain.", year: "2023" },
 ];
 
 /* -------- render -------- */
