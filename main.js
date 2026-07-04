@@ -1,16 +1,14 @@
 /* ============================================================
-   Kanishk Kapoor — "The Closer"  ·  motion + interaction
-   Critical path (loader / reveals / counters) is rAF-independent
-   so it never blanks the page. Lenis + custom cursor are
-   progressive enhancement layered on top.
+   Kanishk Kapoor — "The Closer"
+   No loader, no cursor gimmicks — content first, motion as seasoning.
    ============================================================ */
 
-/* -------- SELECTED WORK (outcomes) — real content -------- */
+/* -------- SELECTED WORK (outcomes) -------- */
 const PROJECTS = [
   {
     idx: "01",
     title: "Peach — owned all of sales",
-    tags: ["Sales Lead", "EdTech AI", "Outbound", "Closing"],
+    tags: "Sales Lead / EdTech AI / Full cycle",
     metric: "₹1 Cr",
     metricLabel: "closed · ~40% mine",
     eyebrow: "AI for personalizing education · Sales lead",
@@ -26,10 +24,10 @@ const PROJECTS = [
   {
     idx: "02",
     title: "Factory Eye — built from zero",
-    tags: ["0→1 Founder", "Edge AI / CV", "Manufacturing"],
+    tags: "Founder / Edge AI · CV / Manufacturing",
     metric: "12 in 3wks",
     metricLabel: "meetings, self-sourced",
-    eyebrow: "5A Venture Studio · Edge-AI manufacturing · Founder",
+    eyebrow: "5A Ventures · Edge-AI manufacturing · Founder",
     metrics: [
       { n: "12 / 3wk", l: "Meetings, all self-booked" },
       { n: "6", l: "Factory floor visits" },
@@ -42,10 +40,10 @@ const PROJECTS = [
   {
     idx: "03",
     title: "RegMitra — validated it end-to-end",
-    tags: ["Product Validation", "RegTech", "0→1 Prototype"],
+    tags: "Product Validation / RegTech / 0→1 Prototype",
     metric: "15+",
     metricLabel: "CAs validated with",
-    eyebrow: "5A Venture Studio · RegTech · Product validation",
+    eyebrow: "5A Ventures · RegTech · Product validation",
     metrics: [
       { n: "15+", l: "CAs run through validation" },
       { n: "13", l: "Recorded validation calls" },
@@ -58,106 +56,133 @@ const PROJECTS = [
   {
     idx: "04",
     title: "Sigil — GTM & brand from scratch",
-    tags: ["Legal-Tech", "Founder / GTM", "Brand + Site"],
-    metric: "25+",
-    metricLabel: "named target accounts",
-    eyebrow: "5A Venture Studio · Legal-tech · Founder / GTM",
+    tags: "Co-Founder / Legal-AI / Brand + Site",
+    metric: "0→1",
+    metricLabel: "brand, site & motion live",
+    eyebrow: "5A Ventures · Legal-AI · Co-founder",
     metrics: [
-      { n: "25+", l: "Named SaaS targets" },
-      { n: "Live", l: "Landing page shipped" },
-      { n: "Full", l: "Brand kit produced" },
+      { n: "Live", l: "sigil91.com shipped" },
+      { n: "Full", l: "Brand & positioning owned" },
+      { n: "0→1", l: "Prospecting engine built" },
     ],
     problem: "Fast-scaling Indian SaaS companies sign high volumes of complex, cross-border contracts with no in-house legal team — and hourly outside counsel is too slow, stalling enterprise deals.",
-    action: "Owned commercial from zero: built the full prospecting engine (ICP, ranked target list, personalized messaging, multi-touch cadence), produced the complete brand kit, and built and shipped the sigil91.com landing page (Next.js / React / Tailwind).",
-    outcome: "A live product site and a running founder-led outreach motion across 25+ named SaaS targets (Zenskar, Scrut, CloudSEK, Leena AI, and more) — early-stage pipeline in motion.",
+    action: "Co-founded and own everything commercial: defined the ICP and positioning, built the full prospecting engine — research, personalized messaging, multi-touch cadence — produced the complete brand kit, and designed, built, and shipped sigil91.com (Next.js / React / Tailwind).",
+    outcome: "A live product, a brand that reads credible to legal buyers, and a founder-led outreach motion running against fast-scaling SaaS targets like Zenskar, Scrut, CloudSEK, and Leena AI.",
   },
 ];
 
-/* -------- THINGS I'VE BUILT (private projects + technical proof) -------- */
+/* -------- BUILT BY HAND (working software, each born from a sales need) -------- */
 const BUILDS = [
   {
-    name: "AI SDR — solo build",
-    blurb: "An AI sales-development rep I built solo: sources leads, writes personalized cold sequences in my voice, and books meetings. The engine behind my own outbound.",
-    stack: ["Next.js", "Drizzle", "Postgres", "AI SDK"],
+    name: "Peach AI SDR",
+    role: "Solo build · in production at Peach",
+    blurb: "An AI sales-development rep: sources leads, writes personalized cold sequences, tracks the CRM, books meetings.",
+    did: "I built this solo while running sales at Peach — it became the engine behind my own outbound. Lead sourcing, voice-matched sequencing, campaign builder, CRM views. I sold with it every day, then improved what the data said was weak.",
+    stack: "Next.js · Drizzle · Postgres · AI SDK",
     link: "",
-    role: "Solo — design, build, ship",
-    detail: "A personal project, start to finish. I wanted outbound that sounded like me and ran itself, so I built one: it pulls target leads, drafts multi-touch cold sequences tuned to my voice, and books meetings. Sold nothing to build it — just proof I can spec, build, and ship an AI product end-to-end, not just sell one.",
+    note: "Code private (company)",
+    detail: "Built start-to-finish while I was the only sales hire at Peach: it pulls target leads, drafts multi-touch cold sequences tuned to my voice, manages the CRM pipeline, and books meetings. This is the tool behind the 50+ meetings — I wasn't just the user, I was the builder. The code lives in the company's private org, so no public link — happy to walk through it live.",
   },
   {
     name: "Job-Search Agent",
-    blurb: "A local AI that finds roles, scores them against my résumé, and drafts outreach in my voice. Runs on my own laptop, on free tiers.",
-    stack: ["Next.js", "Gemini", "SQLite", "Adzuna"],
-    link: "",
-    role: "Solo — design, build, ship",
-    detail: "A private tool I built for my own search: it auto-discovers relevant roles across London + India, scores each one against my real résumé, drafts tailored applications and cold outreach in my voice, and scans startup news for companies worth approaching. Draft-and-approve — I send everything myself. Runs locally, on free tiers, controllable from my phone.",
+    role: "Solo build · open source",
+    blurb: "A local-first AI agent that finds roles, scores them against my résumé, and drafts outreach in my voice.",
+    did: "Designed and shipped the whole thing: multi-source job discovery (Adzuna + ATS boards), Gemini-based scoring against my real résumé, voice-matched outreach drafting, a phone-first chat UI, and a daily launchd routine. Draft-and-approve — nothing sends itself.",
+    stack: "Next.js · Gemini · SQLite · Drizzle",
+    link: "https://github.com/kanishkkapoor2001-coder/job-search-agent",
+    note: "",
+    detail: "My own job search, automated the way a seller would do it: it discovers roles across London + India, scores each against my résumé with reasons, tailors applications, drafts cold outreach in my voice from real writing samples, and scans startup news for companies worth approaching. Runs locally on free tiers, controlled from my phone. The repo is public — read the code.",
   },
   {
-    name: "UNBEATEN XI",
-    blurb: "A daily cricket guessing game — build a team under the constraints, chase the streak.",
-    stack: ["Vite", "React", "TypeScript"],
+    name: "RegMitra prototype",
+    role: "Built for validation · 5A Ventures",
+    blurb: "Watches 17 Indian regulators, summarizes every circular, and tells a CA exactly which clients it hits.",
+    did: "Built the scraper across 17 regulator sites, the summarization pipeline, and a deterministic applicability engine mapping circulars to client profiles — then used it in 13+ recorded validation calls to prove a purpose-built tool beats raw ChatGPT on recent regulation.",
+    stack: "Python / Playwright · Next.js · pgvector · RAG",
     link: "",
-    role: "Solo — design, build, ship",
-    detail: "A for-fun daily puzzle game: build a cricket XI that satisfies the day's constraints and keep your streak alive. Built solo — product, logic, and front-end.",
+    note: "Pre-launch",
+    detail: "The working prototype behind the RegMitra validation: a 17-regulator Python scraper feeding a deterministic applicability engine, so a Chartered Accountant sees only the circulars that actually hit their clients. Built to answer one question honestly — is this better than ChatGPT for a practicing CA? The blind benchmark said yes.",
   },
   {
-    name: "RegMitra — RegTech MVP",
-    blurb: "Watches 17 Indian regulators, summarizes every circular, and tells a CA exactly which of their clients it hits.",
-    stack: ["Next.js", "pgvector", "Python / Playwright", "RAG"],
+    name: "Factory Eye station",
+    role: "Founder · 5A Ventures",
+    blurb: "On-device visual inspection for factory floors: pass/fail on every part in under a second, audit-ready logs, no cloud.",
+    did: "Set the product spec and unit economics (sub-$900 vs $18K–$240K rigs), drove the founding hardware-engineer hire, and built the product site. The hardware runs YOLOv8 on a Raspberry Pi + Hailo accelerator at the edge.",
+    stack: "Raspberry Pi · Hailo · YOLOv8",
     link: "",
-    role: "5A Venture Studio — product + build",
-    detail: "The working prototype behind the RegMitra validation: a 17-regulator Python scraper feeding a deterministic applicability engine, so a Chartered Accountant sees only the circulars that actually hit their clients. I built it to prove a purpose-built tool beats raw ChatGPT on recent regulation.",
+    note: "In pilot costing",
+    detail: "An on-device visual-inspection station for auto-parts suppliers: every part graded in under a second with an audit trail, at a price a mid-size Indian supplier can actually sign. I own the spec, the pricing, the GTM, and the hiring — the sales motion and the product decisions are the same brain.",
   },
   {
-    name: "Factory Eye — Edge AI",
-    blurb: "On-device visual inspection: pass/fail on every part in under a second, with audit-ready logs. No cloud.",
-    stack: ["Raspberry Pi", "Hailo", "YOLOv8"],
-    link: "",
-    role: "5A Venture Studio — founder + build",
-    detail: "The product behind Factory Eye: an on-device visual-inspection station (Raspberry Pi + Hailo + YOLOv8) that grades every part in under a second with an audit trail — for under $900, versus $18K–$240K enterprise rigs. I set the spec, drove the hardware-engineer hire, and shipped the product site.",
-  },
-  {
-    name: "Sigil — sigil91.com",
-    blurb: "Legal-ops landing page for a fast-scaling-SaaS contract tool — designed, built, and shipped.",
-    stack: ["Next.js", "React", "Tailwind"],
+    name: "sigil91.com",
+    role: "Co-founder · design & build",
+    blurb: "Sigil's live product site — brand kit, copy, and code, shipped end-to-end.",
+    did: "Produced the complete brand kit, wrote the positioning and copy, and designed and built the site itself. The front door for our founder-led outbound.",
+    stack: "Next.js · React · Tailwind",
     link: "https://sigil91.com",
-    role: "5A Venture Studio — brand + site",
-    detail: "The live product site for Sigil, built end-to-end: brand kit, copy, and a shipped Next.js landing page — sigil91.com. The front door for a founder-led outbound motion across 25+ named SaaS targets.",
+    note: "",
+    detail: "Sigil's public face: brand, positioning, copy, and code — all mine, shipped. It's what a legal buyer sees after my first cold touch, so it had to read credible instantly.",
+  },
+  {
+    name: "This site",
+    role: "Solo build · you're looking at it",
+    blurb: "Designed and hand-coded — no template, no builder. The résumé PDF is generated from code too.",
+    did: "Vanilla HTML/CSS/JS, hand-set type, scroll choreography, and the exit-intent close you'll meet if you try to leave. Deployed on GitHub Pages straight from the repo.",
+    stack: "HTML · CSS · JS · GitHub Pages",
+    link: "https://github.com/kanishkkapoor2001-coder/kanishk-portfolio",
+    note: "",
+    detail: "A sales artifact about sales: dark editorial design, one accent spent only on the numbers that matter, and an exit-intent popup that does what a closer does. Every line of it is in the public repo.",
   },
 ];
 
-/* -------- TRACK RECORD (verify dates before sharing) -------- */
+/* -------- TRACK RECORD -------- */
 const RECORD = [
   { role: "Founder / GTM", co: "5A Ventures", desc: "Leading three ventures 0→1 — Factory Eye, RegMitra, Sigil — from strategy to sales to hiring.", year: "2026 — Now" },
   { role: "Sales Lead", co: "Peach (EdTech AI)", desc: "Owned all sales — 50+ meetings in 6 months; sourced ~40% of ₹1 Cr closed.", year: "2025 — 26" },
   { role: "Chief of Staff", co: "Iridia Medical", desc: "Ran operations and commercial motion in a technical, regulated domain.", year: "2023" },
 ];
 
-/* -------- render -------- */
+/* -------- render: work -------- */
 (function renderWork() {
   document.getElementById("workList").innerHTML = PROJECTS.map((p, i) => `
-    <div class="work-item" data-reveal data-cursor="hover" data-project="${i}">
+    <div class="work-item" data-reveal data-project="${i}">
       <div class="work-item__idx">${p.idx}</div>
       <div class="work-item__main">
         <div class="work-item__title">${p.title}</div>
-        <div class="work-item__tags">${p.tags.map(t => `<span class="work-item__tag">${t}</span>`).join("")}</div>
+        <div class="work-item__tags">${p.tags}</div>
       </div>
       <div class="work-item__metric"><b>${p.metric}</b><span>${p.metricLabel}</span></div>
       <div class="work-item__arrow">
-        <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </div>
     </div>`).join("");
 })();
+
+/* -------- render: builds -------- */
 (function renderBuilds() {
-  document.getElementById("buildsGrid").innerHTML = BUILDS.map((b, i) => `
-    <div class="build" data-reveal data-cursor="hover" data-build="${i}">
-      <div class="build__top">
+  document.getElementById("buildsList").innerHTML = BUILDS.map((b, i) => `
+    <div class="build" data-reveal data-build="${i}">
+      <div class="build__id">
         <h3 class="build__name">${b.name}</h3>
-        ${b.link ? `<a class="build__link" href="${b.link}" target="_blank" rel="noopener" data-stop aria-label="Open ${b.name}"><svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>` : `<span class="build__open" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>`}
+        <span class="build__role">${b.role}</span>
       </div>
-      <p class="build__blurb">${b.blurb}</p>
-      <div class="build__stack">${b.stack.map(s => `<span>${s}</span>`).join("")}</div>
+      <div class="build__body">
+        <p class="build__blurb">${b.blurb}</p>
+        <p class="build__did"><b>What I did:</b> ${b.did}</p>
+        <span class="build__stack">${b.stack}</span>
+      </div>
+      <div class="build__side">
+        ${b.link
+          ? `<a class="build__link" href="${b.link}" target="_blank" rel="noopener" data-stop>
+               <span>${b.link.includes("github") ? "View code" : "Visit site"}</span>
+               <svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+             </a>`
+          : (b.note ? `<span class="build__note">${b.note}</span>` : "")}
+      </div>
     </div>`).join("");
 })();
+
+/* -------- render: record -------- */
 (function renderRecord() {
   document.getElementById("recordList").innerHTML = RECORD.map(r => `
     <div class="record-item" data-reveal>
@@ -168,25 +193,10 @@ const RECORD = [
 })();
 document.getElementById("year").textContent = new Date().getFullYear();
 
-/* -------- loader → reveal (timer-based, always runs) -------- */
-(function loader() {
-  const loaderEl = document.getElementById("loader");
-  const num = document.getElementById("loaderNum");
-  let v = 0;
-  const tick = setInterval(() => {
-    v = Math.min(100, v + Math.round(4 + Math.random() * 7));
-    num.textContent = v;
-    if (v >= 100) {
-      clearInterval(tick);
-      setTimeout(() => {
-        document.body.classList.add("loaded");
-        setTimeout(() => { if (loaderEl) loaderEl.style.display = "none"; }, 1000);
-      }, 180);
-    }
-  }, 90);
-})();
+/* -------- instant load (no loader screen) -------- */
+requestAnimationFrame(() => requestAnimationFrame(() => document.body.classList.add("loaded")));
 
-/* -------- scroll reveals via IntersectionObserver (rAF-free) -------- */
+/* -------- scroll reveals -------- */
 (function reveals() {
   const els = document.querySelectorAll("[data-reveal]");
   if (!("IntersectionObserver" in window)) {
@@ -201,24 +211,23 @@ document.getElementById("year").textContent = new Date().getFullYear();
   els.forEach(e => io.observe(e));
 })();
 
-/* -------- counters via IntersectionObserver + setInterval -------- */
+/* -------- counters -------- */
 (function counters() {
   const counts = document.querySelectorAll(".count");
   const run = (el) => {
-    if (el.dataset.arrow === "1") { el.textContent = "0→1"; return; }
     const to = parseFloat(el.dataset.to || "0");
     const dec = parseInt(el.dataset.dec || "0", 10);
     const prefix = el.dataset.prefix || "";
     const suffix = el.dataset.suffix || "";
-    const dur = 1500, start = performance.now();
+    const dur = 1300, start = performance.now();
     const step = (now) => {
       const t = Math.min(1, (now - start) / dur);
       const eased = 1 - Math.pow(1 - t, 3);
       el.textContent = prefix + (to * eased).toFixed(dec) + suffix;
-      if (t < 1) setTimeout(() => step(performance.now()), 16);
+      if (t < 1) requestAnimationFrame(step);
       else el.textContent = prefix + to.toFixed(dec) + suffix;
     };
-    step(performance.now());
+    requestAnimationFrame(step);
   };
   if (!("IntersectionObserver" in window)) { counts.forEach(run); return; }
   const io = new IntersectionObserver((entries) => {
@@ -227,43 +236,10 @@ document.getElementById("year").textContent = new Date().getFullYear();
   counts.forEach(e => io.observe(e));
 })();
 
-/* -------- custom cursor (enhancement) -------- */
-(function cursorFx() {
-  const cursor = document.querySelector(".cursor");
-  const dot = document.querySelector(".cursor__dot");
-  const ring = document.querySelector(".cursor__ring");
-  if (!cursor || window.matchMedia("(hover: none)").matches) return;
-  let mx = innerWidth / 2, my = innerHeight / 2, rx = mx, ry = my;
-  addEventListener("mousemove", (e) => {
-    mx = e.clientX; my = e.clientY;
-    dot.style.left = mx + "px"; dot.style.top = my + "px";
-  });
-  (function loop() {
-    rx += (mx - rx) * 0.2; ry += (my - ry) * 0.2;
-    ring.style.left = rx + "px"; ring.style.top = ry + "px";
-    requestAnimationFrame(loop);
-  })();
-  const on = () => cursor.classList.add("cursor--hover");
-  const off = () => cursor.classList.remove("cursor--hover");
-  document.querySelectorAll('a, button, [data-cursor="hover"]').forEach(el => {
-    el.addEventListener("mouseenter", on); el.addEventListener("mouseleave", off);
-  });
-})();
-
-/* -------- magnetic buttons (enhancement) -------- */
-document.querySelectorAll(".magnetic").forEach((el) => {
-  el.style.transition = "transform .5s cubic-bezier(0.22,1,0.36,1)";
-  el.addEventListener("mousemove", (e) => {
-    const r = el.getBoundingClientRect();
-    el.style.transform = `translate(${(e.clientX - r.left - r.width/2) * 0.25}px, ${(e.clientY - r.top - r.height/2) * 0.35}px)`;
-  });
-  el.addEventListener("mouseleave", () => { el.style.transform = "translate(0,0)"; });
-});
-
-/* -------- Lenis smooth scroll (enhancement) -------- */
+/* -------- Lenis smooth scroll -------- */
 let lenis = null;
 if (window.Lenis) {
-  lenis = new Lenis({ duration: 1.1, easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)) });
+  lenis = new Lenis({ duration: 1.05, easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)) });
   window.lenisInstance = lenis;
   (function raf(t) { lenis.raf(t); requestAnimationFrame(raf); })();
 }
@@ -282,7 +258,7 @@ addEventListener("scroll", () => {
   document.getElementById("nav").classList.toggle("is-scrolled", scrollY > 40);
 }, { passive: true });
 
-/* -------- project modal -------- */
+/* -------- modals -------- */
 const modal = document.getElementById("modal");
 const modalContent = document.getElementById("modalContent");
 function openProject(i) {
@@ -294,19 +270,21 @@ function openProject(i) {
     <div class="modal__block"><h4>The problem</h4><p>${p.problem}</p></div>
     <div class="modal__block"><h4>What I did</h4><p>${p.action}</p></div>
     <div class="modal__block"><h4>Outcome</h4><p>${p.outcome}</p></div>
-    <div class="modal__tags">${p.tags.map(t => `<span>${t}</span>`).join("")}</div>`;
-  modal.classList.add("is-open");
-  modal.setAttribute("aria-hidden", "false");
-  if (lenis) lenis.stop();
+    <div class="modal__tags">${p.tags}</div>`;
+  openModal();
 }
 function openBuild(i) {
   const b = BUILDS[i]; if (!b) return;
   modalContent.innerHTML = `
-    <div class="modal__eyebrow">${b.role || "Project"}</div>
+    <div class="modal__eyebrow">${b.role}</div>
     <h3 class="modal__title">${b.name}</h3>
     <div class="modal__block"><h4>What it is</h4><p>${b.detail || b.blurb}</p></div>
-    <div class="modal__tags">${b.stack.map(s => `<span>${s}</span>`).join("")}</div>
-    ${b.link ? `<a class="modal__cta magnetic" href="${b.link}" target="_blank" rel="noopener" data-cursor="hover"><span>Visit ${b.name.split("—")[0].trim()}</span><svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>` : ""}`;
+    <div class="modal__block"><h4>What I did</h4><p>${b.did}</p></div>
+    <div class="modal__tags">${b.stack}</div>
+    ${b.link ? `<a class="modal__cta" href="${b.link}" target="_blank" rel="noopener"><span>${b.link.includes("github") ? "View the code" : "Visit the site"}</span><svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>` : ""}`;
+  openModal();
+}
+function openModal() {
   modal.classList.add("is-open");
   modal.setAttribute("aria-hidden", "false");
   if (lenis) lenis.stop();
@@ -317,7 +295,6 @@ function closeModal() {
   if (lenis) lenis.start();
 }
 document.addEventListener("click", (e) => {
-  // let external "visit" links behave normally
   if (e.target.closest("[data-stop]")) { e.stopPropagation(); return; }
   const proj = e.target.closest("[data-project]");
   if (proj) return openProject(parseInt(proj.dataset.project, 10));
@@ -327,7 +304,7 @@ document.addEventListener("click", (e) => {
 });
 document.addEventListener("keydown", (e) => { if (e.key === "Escape") { closeModal(); closeExit(); } });
 
-/* -------- exit-intent popup -------- */
+/* -------- exit-intent -------- */
 const exitModal = document.getElementById("exitModal");
 function openExit() {
   if (!exitModal) return;
@@ -344,7 +321,6 @@ function closeExit() {
   let shown = false;
   const KEY = "kk_exit_shown";
   try { if (sessionStorage.getItem(KEY)) shown = true; } catch (_) {}
-  // Desktop: fire when the cursor leaves through the top of the viewport.
   document.addEventListener("mouseout", (e) => {
     if (shown) return;
     if (e.clientY <= 0 && !e.relatedTarget) {

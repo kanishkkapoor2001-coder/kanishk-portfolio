@@ -17,31 +17,19 @@
   <!-- grain overlay -->
   <div class="grain" aria-hidden="true"></div>
 
-  <!-- custom cursor -->
-  <div class="cursor" aria-hidden="true">
-    <div class="cursor__dot"></div>
-    <div class="cursor__ring"></div>
-  </div>
-
-  <!-- loader -->
-  <div class="loader" id="loader" aria-hidden="true">
-    <div class="loader__count"><span id="loaderNum">0</span><em>%</em></div>
-    <div class="loader__word">KK</div>
-  </div>
-
   <!-- nav -->
   <header class="nav" id="nav">
-    <a href="#top" class="nav__brand" data-cursor="hover">
+    <a href="#top" class="nav__brand">
       <span class="nav__mark">KK</span>
       <span class="nav__name">Kanishk&nbsp;Kapoor</span>
     </a>
     <nav class="nav__links">
-      <a href="#work" data-cursor="hover">Work</a>
-      <a href="#builds" data-cursor="hover">Built</a>
-      <a href="#record" data-cursor="hover">Track record</a>
-      <a href="#about" data-cursor="hover">About</a>
+      <a href="#work">Work</a>
+      <a href="#builds">Built</a>
+      <a href="#record">Track record</a>
+      <a href="#about">About</a>
     </nav>
-    <a href="#contact" class="nav__cta magnetic" data-cursor="hover">
+    <a href="#contact" class="nav__cta">
       <span>Let's talk</span>
       <span class="nav__cta-dot"></span>
     </a>
@@ -51,34 +39,26 @@
 
     <!-- HERO -->
     <section class="hero" id="hero">
-      <div class="hero__glow" aria-hidden="true"></div>
-      <div class="hero__inner">
-        <div class="hero__eyebrow reveal-line">
-          <span class="tick"></span> Technical Sales · GTM · Founder's Office
-        </div>
-
-        <h1 class="hero__title">
-          <span class="line"><span class="w">I&nbsp;turn</span> <span class="w">cold</span> <span class="w">pipeline</span></span>
-          <span class="line"><span class="w">into</span> <span class="w serif-it">closed</span> <span class="w serif-it">revenue.</span></span>
-        </h1>
-
-        <div class="hero__foot">
-          <p class="hero__sub reveal-line">
-            Seven-figure pipeline built from a cold start. I run the full technical
-            sale — discovery, demo, POC, close — and translate hard products for the
-            people who sign the cheque.
-          </p>
-          <div class="hero__meta reveal-line">
-            <span class="dot-live"></span>
-            Open to Sales Engineer / GTM roles — London &amp; remote
-          </div>
-        </div>
+      <div class="hero__eyebrow reveal-line">
+        <span class="tick"></span> Technical Sales · GTM · Founder's Office
       </div>
 
-      <a href="#stats" class="hero__scroll" data-cursor="hover" aria-label="Scroll down">
-        <span>Scroll</span>
-        <span class="hero__scroll-line"></span>
-      </a>
+      <h1 class="hero__title">
+        <span class="line"><span class="w">I&nbsp;turn</span> <span class="w">cold</span> <span class="w">pipeline</span></span>
+        <span class="line"><span class="w">into</span> <span class="w serif-it">closed</span> <span class="w serif-it">revenue.</span></span>
+      </h1>
+
+      <div class="hero__foot">
+        <p class="hero__sub reveal-line">
+          <b>₹1 Cr closed</b> at my last company — I ran every meeting.
+          Now leading three ventures 0→1 at a studio. Discovery, demo,
+          POC, close — and when the product doesn't exist yet, I build it myself.
+        </p>
+        <div class="hero__meta reveal-line">
+          <span class="dot-live"></span>
+          Open to Sales Engineer / GTM roles — London &amp; remote
+        </div>
+      </div>
     </section>
 
     <!-- STATS -->
@@ -98,38 +78,16 @@
         </div>
         <div class="stat" data-reveal>
           <div class="stat__num"><span class="count" data-to="3" data-suffix="">0</span></div>
-          <div class="stat__label">Ventures led 0→1 at 5A Venture Studio</div>
+          <div class="stat__label">Ventures led 0→1 at 5A Ventures</div>
         </div>
       </div>
     </section>
-
-    <!-- MARQUEE -->
-    <div class="marquee" aria-hidden="true">
-      <div class="marquee__track">
-        <span>Cold Outreach</span><span class="sep">/</span>
-        <span>Discovery</span><span class="sep">/</span>
-        <span>Demos</span><span class="sep">/</span>
-        <span>Closing</span><span class="sep">/</span>
-        <span>0→1 GTM</span><span class="sep">/</span>
-        <span>Founder's Office</span><span class="sep">/</span>
-        <span>Product Validation</span><span class="sep">/</span>
-        <span>Pipeline</span><span class="sep">/</span>
-        <span>Cold Outreach</span><span class="sep">/</span>
-        <span>Discovery</span><span class="sep">/</span>
-        <span>Demos</span><span class="sep">/</span>
-        <span>Closing</span><span class="sep">/</span>
-        <span>0→1 GTM</span><span class="sep">/</span>
-        <span>Founder's Office</span><span class="sep">/</span>
-        <span>Product Validation</span><span class="sep">/</span>
-        <span>Pipeline</span><span class="sep">/</span>
-      </div>
-    </div>
 
     <!-- ABOUT / POSITIONING -->
     <section class="about" id="about">
       <div class="about__label" data-reveal><span>01</span> The pitch</div>
       <div class="about__body">
-        <p class="about__lead" data-reveal-words>
+        <p class="about__lead" data-reveal>
           I'm a <em>sales dog</em> who speaks engineer. I've built pipeline from
           nothing, sat across the table from technical buyers, and turned
           "interesting" into signed. The rare part isn't the tech — it's the
@@ -164,11 +122,14 @@
     <!-- BUILDS -->
     <section class="builds" id="builds">
       <div class="builds__head">
-        <div class="work__label" data-reveal><span>03</span> Things I've built</div>
+        <div class="work__label" data-reveal><span>03</span> Built by hand</div>
         <h2 class="work__title" data-reveal>I sell what I can build.</h2>
-        <p class="builds__sub" data-reveal>Sales engineering isn't a stretch — I ship the products too. A few of them:</p>
+        <p class="builds__sub" data-reveal>
+          Working software I've shipped — not mockups. Each one exists because a
+          real sales motion needed it.
+        </p>
       </div>
-      <div class="builds__grid" id="buildsGrid"><!-- rendered by JS --></div>
+      <div class="builds__list" id="buildsList"><!-- rendered by JS --></div>
     </section>
 
     <!-- TRACK RECORD -->
@@ -182,29 +143,26 @@
 
     <!-- CONTACT -->
     <section class="contact" id="contact">
-      <div class="contact__glow" aria-hidden="true"></div>
-      <div class="contact__inner">
-        <div class="contact__label" data-reveal><span>05</span> Let's talk</div>
-        <h2 class="contact__title" data-reveal>
-          <span class="line"><span class="w">Let's build</span></span>
-          <span class="line"><span class="w serif-it">pipeline.</span></span>
-        </h2>
-        <div class="contact__actions">
-          <a class="contact__btn magnetic" href="mailto:kanishkkapoor2001@gmail.com" data-cursor="hover">
-            <span>kanishkkapoor2001@gmail.com</span>
-            <svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
-          <div class="contact__socials">
-            <a href="https://www.linkedin.com/in/kanishkkapoor2001" target="_blank" rel="noopener" data-cursor="hover">LinkedIn</a>
-            <a href="mailto:kanishkkapoor2001@gmail.com?subject=Booking%20a%20call%20with%20Kanishk&amp;body=Hi%20Kanishk%2C%20I%27d%20like%20to%20grab%2015%20minutes.%20A%20few%20times%20that%20work%20for%20me%3A%0A%0A-%20" data-cursor="hover">Book a call</a>
-            <a href="./Kanishk-Kapoor-Resume.pdf" target="_blank" rel="noopener" data-cursor="hover">Résumé (PDF)</a>
-          </div>
+      <div class="contact__label" data-reveal><span>05</span> Let's talk</div>
+      <h2 class="contact__title" data-reveal>
+        <span class="line"><span class="w">Let's build</span></span>
+        <span class="line"><span class="w serif-it">pipeline.</span></span>
+      </h2>
+      <div class="contact__actions">
+        <a class="contact__btn" href="mailto:kanishkkapoor2001@gmail.com">
+          <span>kanishkkapoor2001@gmail.com</span>
+          <svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <div class="contact__socials">
+          <a href="https://www.linkedin.com/in/kanishkkapoor2001" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="mailto:kanishkkapoor2001@gmail.com?subject=Booking%20a%20call%20with%20Kanishk&amp;body=Hi%20Kanishk%2C%20I%27d%20like%20to%20grab%2015%20minutes.%20A%20few%20times%20that%20work%20for%20me%3A%0A%0A-%20">Book a call</a>
+          <a href="./Kanishk-Kapoor-Resume.pdf" target="_blank" rel="noopener">Résumé (PDF)</a>
         </div>
       </div>
       <footer class="footer">
         <span>© <span id="year"></span> Kanishk Kapoor</span>
         <span class="footer__made">Built to close.</span>
-        <a href="#top" data-cursor="hover" class="footer__top">Back to top ↑</a>
+        <a href="#top" class="footer__top">Back to top ↑</a>
       </footer>
     </section>
 
@@ -214,7 +172,7 @@
   <div class="modal" id="modal" aria-hidden="true">
     <div class="modal__scrim" data-close></div>
     <article class="modal__panel" role="dialog" aria-modal="true">
-      <button class="modal__close" data-close data-cursor="hover" aria-label="Close">
+      <button class="modal__close" data-close aria-label="Close">
         <svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
       </button>
       <div class="modal__content" id="modalContent"></div>
@@ -225,7 +183,7 @@
   <div class="exit" id="exitModal" aria-hidden="true">
     <div class="exit__scrim" data-exit-close></div>
     <div class="exit__panel" role="dialog" aria-modal="true">
-      <button class="exit__close" data-exit-close data-cursor="hover" aria-label="Close">
+      <button class="exit__close" data-exit-close aria-label="Close">
         <svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
       </button>
       <div class="exit__tick"><span class="dot-live"></span> Still here</div>
@@ -233,11 +191,11 @@
       <p class="exit__lead">Let's close your <span class="serif-it">next deal</span> too.</p>
       <p class="exit__sub">Your revenue pipeline can never be too good. Let's chat.</p>
       <div class="exit__actions">
-        <a class="exit__btn magnetic" href="mailto:kanishkkapoor2001@gmail.com?subject=Let%27s%20chat" data-cursor="hover">
+        <a class="exit__btn" href="mailto:kanishkkapoor2001@gmail.com?subject=Let%27s%20chat">
           <span>Let's chat</span>
           <svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
-        <button class="exit__dismiss" data-exit-close data-cursor="hover">Maybe later</button>
+        <button class="exit__dismiss" data-exit-close>Maybe later</button>
       </div>
     </div>
   </div>
